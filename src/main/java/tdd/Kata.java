@@ -34,20 +34,37 @@ public class Kata {
     }
 
 
-    public int exam(int scoreNumber) {
-        int result = 0;
-        if(scoreNumber >= 90 && scoreNumber <= 100) result = A;
-        if(scoreNumber >= 80 && scoreNumber < 90) result  = B;
-        if(scoreNumber >= 70 && scoreNumber < 80) result = C;
-        if(scoreNumber >= 60 && scoreNumber < 70) result = D;
-        if(scoreNumber < 60) result = F;
+    public String exam(int scoreNumber) {
+        String result = "0";
+        if(scoreNumber >= 90 && scoreNumber <= 100) result = "A";
+        if(scoreNumber >= 80 && scoreNumber < 90) result  = "B";
+        if(scoreNumber >= 70 && scoreNumber < 80) result = "C";
+        if(scoreNumber >= 60 && scoreNumber < 70) result = "D";
+        if(scoreNumber < 60) result = "F";
     return result;
     }
 
-    public int score(int score) {
-        int result = 0;
-        if(score >= 55) result = PASS;
-        if(score < 55)  result = FAIL;
+    public String score(int score) {
+        String result = "0";
+        if(score >= 55) result = "PASS";
+        if(score < 55)  result = "FAIL";
         return result;
+    }
+
+
+    public double BMICalculator(double weight, double height) {
+        double onePound = 0.45359237;
+        double oneInch = 0.0254;
+        System.out.println("Enter weight in pound: " + weight);
+        System.out.println("Enter height in inches: " + height);
+         double poundsToKilogram = weight * onePound;
+         double inchesToMeters = height * oneInch;
+
+         double BMI = poundsToKilogram / (inchesToMeters * inchesToMeters);
+         System.out.printf("BMI is " + BMI);
+         return BMI;
+
+
+
     }
 }
