@@ -88,6 +88,13 @@ public class KataTest {
         double BMI = calculator.BMICalculator(95.5 ,50);
         assertEquals(26.857257942215885,BMI);
     }
+    @Test
+    public  void  interestTest(){
+        Kata calculator = new Kata();
+        double interest =  calculator.financialApplication(1000,3.5,1200);
+        assertEquals(2.916666666666667,interest);
+
+    }
 
 }
 

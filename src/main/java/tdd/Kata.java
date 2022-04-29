@@ -67,4 +67,9 @@ public class Kata {
 
 
     }
+
+    public double financialApplication(int balance, double InterestRate, int constant) {
+        double interest = balance * (InterestRate/ 1200 );
+        return interest;
+    }
 }
