@@ -1,5 +1,6 @@
 package chapterFour;
 /*
+pseudocode:
     number of mileage is entered by the user
     amount of gallons used is entered by the user
     the total mileage and total gallon used are initialized to be 0
@@ -50,8 +51,5 @@ public class GasMileage {
             System.out.printf("The Combined miles per gallon used for the trips is: %.2f%n", milesPerGallonUsed);
 
         }
-
-
-
     }
 }
