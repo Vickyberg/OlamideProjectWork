@@ -53,11 +53,8 @@ public class CreditLimitCalculator {
                      System.out.println("Credit Limit Exceeded");
                  }
 
-
-
              }
          }
-
 
     }
 }
