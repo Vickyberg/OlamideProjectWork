@@ -16,9 +16,9 @@ public class CreditLimitCalculator {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
 
-        int accountNumber ;
-        int beginningBalance ;
-        int itemsCharged ;
+        int accountNumber;
+        int beginningBalance;
+        int itemsCharged;
         int creditsApplied ;
         int creditLimit ;
         int newBalance ;
@@ -37,7 +37,7 @@ public class CreditLimitCalculator {
                  System.out.println("Enter your item charged: ");
                  itemsCharged = input.nextInt();
 
-                 if (itemsCharged < 0){
+                 if (itemsCharged > 0){
                      System.out.println("Enter your item charged this month: ");
                      itemsCharged = input.nextInt();
                  }
