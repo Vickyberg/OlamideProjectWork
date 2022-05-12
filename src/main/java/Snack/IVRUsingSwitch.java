@@ -1,68 +1,63 @@
 package Snack;
 
+
 import java.util.Scanner;
 
 public class IVRUsingSwitch {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
-        System.out.print("Enter 1 for English\n" +
-                "Enter 2 for igbo\n" +
-                "Enter 3 for French\n" +
-                "Enter 4 for Yoruba\n");
+        System.out.print("""
+                Enter 1 for English
+                Enter 2 for Igbo
+                Enter 3 for French
+                Enter 4 for Yoruba
+                """);
         int command = input.nextInt();
         switch (command) {
-            case 1:
-                System.out.println("Enter 1 for Data\n" +
-                        "Enter 2 for Transfer\n");
+            case 1 -> {
+                System.out.println("""
+                        Enter 1 for Data
+                        Enter 2 for Transfer
+                        """);
                 int internet = input.nextInt();
-                switch(internet ){
-                    case 1: System.out.println("Data");
-                    break;
-                    case 2: System.out.println("Transfer");
-                    break;
+                switch (internet) {
+                    case 1 -> System.out.println("Data");
+                    case 2 -> System.out.println("Transfer");
                 }
-
-                break;
-            case 2:
-                System.out.println("Enter 1 for Sharing\n" +
-                        "Enter 2 for Caring");
+            }
+            case 2 -> {
+                System.out.println("""
+                        Enter 1 for Sharing
+                        Enter 2 for Caring""");
                 int attitude = input.nextInt();
                 switch (attitude) {
-                    case 1: System.out.println("Sharing");
-                    break;
-                    case 2: System.out.println("Caring");
-                    break;
-
+                    case 1 -> System.out.println("Sharing");
+                    case 2 -> System.out.println("Caring");
                 }
-                break;
-            case 3:
-                System.out.println("Enter 1 for Egg\n" +
-                        "Enter 2 for Champagne\n");
+            }
+            case 3 -> {
+                System.out.println("""
+                        Enter 1 for Egg
+                        Enter 2 for Champagne
+                        """);
                 int drink = input.nextInt();
-                switch (drink){
-                    case 1: System.out.println("Egg");
-                    break;
-                    case 2: System.out.println("Champagne");
-                    break;
-
+                switch (drink) {
+                    case 1 -> System.out.println("Egg");
+                    case 2 -> System.out.println("Champagne");
                 }
-                break;
-            case 4:
-                System.out.println("Enter 1 for Ewa\n" +
-                        "Enter 2 for Agoyin\n");
+            }
+            case 4 -> {
+                System.out.println("""
+                        Enter 1 for Ewa
+                        Enter 2 for Agoyin
+                        """);
                 int food = input.nextInt();
-                switch (food){
-                    case 1: System.out.println("Ewa");
-                    break;
-                    case 2: System.out.println("Agoyin");
-                    break;
+                switch (food) {
+                    case 1 -> System.out.println("Ewa");
+                    case 2 -> System.out.println("Agoyin");
                 }
-                break;
-            default:
-                System.out.println("ERROR!!!");
-                break;
-
-
+            }
+            default -> System.out.println("ERROR!!!");
         }
     }
 
