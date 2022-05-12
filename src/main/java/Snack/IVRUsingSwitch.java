@@ -12,15 +12,15 @@ public class IVRUsingSwitch {
                 Enter 3 for French
                 Enter 4 for Yoruba
                 """);
-        int command = input.nextInt();
-        switch (command) {
+        int userResponse = input.nextInt();
+        switch (userResponse) {
             case 1 -> {
                 System.out.println("""
                         Enter 1 for Data
                         Enter 2 for Transfer
                         """);
-                int internet = input.nextInt();
-                switch (internet) {
+                 userResponse = input.nextInt();
+                switch (userResponse) {
                     case 1 -> System.out.println("Data");
                     case 2 -> System.out.println("Transfer");
                 }
@@ -29,8 +29,8 @@ public class IVRUsingSwitch {
                 System.out.println("""
                         Enter 1 for Sharing
                         Enter 2 for Caring""");
-                int attitude = input.nextInt();
-                switch (attitude) {
+                userResponse= input.nextInt();
+                switch (userResponse) {
                     case 1 -> System.out.println("Sharing");
                     case 2 -> System.out.println("Caring");
                 }
@@ -40,8 +40,8 @@ public class IVRUsingSwitch {
                         Enter 1 for Egg
                         Enter 2 for Champagne
                         """);
-                int drink = input.nextInt();
-                switch (drink) {
+                 userResponse = input.nextInt();
+                switch (userResponse) {
                     case 1 -> System.out.println("Egg");
                     case 2 -> System.out.println("Champagne");
                 }
@@ -51,8 +51,8 @@ public class IVRUsingSwitch {
                         Enter 1 for Ewa
                         Enter 2 for Agoyin
                         """);
-                int food = input.nextInt();
-                switch (food) {
+                userResponse = input.nextInt();
+                switch (userResponse ) {
                     case 1 -> System.out.println("Ewa");
                     case 2 -> System.out.println("Agoyin");
                 }

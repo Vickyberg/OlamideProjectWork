@@ -7,7 +7,7 @@ public class IVR {
         Scanner input = new Scanner(System.in);
 
         System.out.print("""
-                Enter 1 for English
+                Enter 1  for English
                 Enter 2 for Igbo
                 Enter 3 for French
                 Enter 4 for Yoruba
@@ -19,8 +19,8 @@ public class IVR {
                  Enter 1 for Data
                  Enter 2 for Transfer
                  """);
-         int usage = input.nextInt();
-         if(usage == 1){
+          command = input.nextInt();
+         if(command == 1){
              System.out.println("Data");
          }else{
              System.out.println("Transfer");
@@ -32,8 +32,8 @@ public class IVR {
                  Enter 1 for Sharing
                  Enter 2 for Caring
                  """);
-         int attitude = input.nextInt();
-         if(attitude == 1){
+          command = input.nextInt();
+         if(command == 1){
              System.out.println("Sharing");
          }else {
              System.out.println("Caring");
@@ -45,8 +45,8 @@ public class IVR {
                  Enter 1 for Egg
                  Enter 2 for Champagne
                  """);
-         int substance = input.nextInt();
-         if(substance == 1){
+         command = input.nextInt();
+         if(command == 1){
              System.out.println("Egg");
          }else {
              System.out.println("Champagne");
@@ -58,11 +58,11 @@ public class IVR {
                  Enter 1 for Ewa
                  Enter 2 for Agoyin
                  """);
-         int food = input.nextInt();
-         if(food == 1 ){
+         command = input.nextInt();
+         if(command == 1 ){
              System.out.println("Ewa");
          }else {
-             System.out.println("Ago-yin");
+             System.out.println("Agoyin");
          }
      }
     }
