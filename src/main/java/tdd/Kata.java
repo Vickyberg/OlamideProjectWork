@@ -1,7 +1,7 @@
 package tdd;
 
 public class Kata {
-    public int add(int firstNumber, int secondNumber) {
+    public  int add(int firstNumber, int secondNumber) {
 
         return firstNumber + secondNumber;
     }
