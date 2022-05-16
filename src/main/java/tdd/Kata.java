@@ -1,7 +1,7 @@
 package tdd;
 
 public class Kata {
-    public  int add(int firstNumber, int secondNumber) {
+    public static int add(int firstNumber, int secondNumber) {
 
         return firstNumber + secondNumber;
     }
@@ -70,6 +70,25 @@ public class Kata {
 
     public double financialApplication(int balance, double InterestRate, int constant) {
         double interest = balance * (InterestRate/ 1200 );
-        return interest;
+        return interest ;
+    }
+
+
+
+    public static int noOfFactors(int num) {
+        int factors = 0 ;
+        int i = 1;
+        for(i = 1 ; i<= num;i++){
+            if(num % i == 0)
+                factors++;
+
+        }
+        return factors;
+
+    }
+
+    public boolean isPrime(int num) {
+        if(noOfFactors(num) == 2) return true;
+        return false;
     }
 }

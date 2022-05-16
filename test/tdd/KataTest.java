@@ -2,7 +2,7 @@ package tdd;
 
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.*;
 
 public class KataTest {
     @Test
@@ -95,6 +95,22 @@ public class KataTest {
         assertEquals(2.916666666666667,interest);
 
     }
+    @Test
+    public  void factorsTest(){
+        Kata calc = new Kata();
+        int factors = Kata.noOfFactors(5);
+                assertEquals(2, factors);
+                assertEquals(4,Kata.noOfFactors(10));
+        assertEquals(6, Kata.noOfFactors(20));
+    }
+    @Test
+    public  void primeNumberTest(){
+        Kata calc = new Kata();
+        boolean isPrime = calc.isPrime(5);
+        assertTrue(isPrime);
+
+    }
+
 
 }
 

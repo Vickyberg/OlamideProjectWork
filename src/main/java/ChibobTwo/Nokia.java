@@ -1,10 +1,14 @@
-package Snack;
+package ChibobTwo;
+
+
 
 import java.util.Scanner;
 
 public class Nokia {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
+
+
         System.out.println("List of menu functions");
         System.out.println("""
                 1. Phone Book
@@ -16,10 +20,11 @@ public class Nokia {
                 7. Call divert
                 8. Games
                 9. Calculator
-                10.  Reminder
+                10. Reminder
                 11. Clock
                 12. Profile
                 13. Sim services
+                
                 """);
         int userResponse = input.nextInt();
         switch (userResponse){
@@ -179,7 +184,7 @@ public class Nokia {
                         System.out.println("""
                                 1. Last call cost
                                 2. All calls' cost
-                                3. Clear counters  
+                                3. Clear counters
                                 """);
                         userResponse = input.nextInt();
                         switch (userResponse) {
@@ -331,8 +336,11 @@ public class Nokia {
                 break;
             case 12: System.out.println("Profiles");
                 break;
-            case 13: System.out.println("Sim services");
-                break;
+            case 13:
+                System.out.println("Sim services");
+             break;
+
+
 
        }
 
