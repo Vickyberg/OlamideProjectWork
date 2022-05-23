@@ -110,7 +110,22 @@ public class KataTest {
         assertTrue(isPrime);
 
     }
+    @Test
+    public void hypotenuseTest(){
+        Kata calc = new Kata();
+        double hypotenuse = calc.hypotenuse(3.0,4.0);
+        assertEquals(5.0,hypotenuse);
+        assertEquals(13.0,calc.hypotenuse(5.0,12.0));
+        assertEquals(17.0,calc.hypotenuse(8.0,15.0));
 
+    }
+@Test
+    public  void parkingCharges(){
+        Kata calc = new Kata();
+        double charges = calc.calculateCharges(3);
+        assertEquals(2.0,charges);
+        assertEquals(3.0,calc.calculateCharges(5));
 
+}
 }
 

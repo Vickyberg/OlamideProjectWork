@@ -91,4 +91,22 @@ public class Kata {
         if(noOfFactors(num) == 2) return true;
         return false;
     }
+
+    public double hypotenuse(double side1, double side2) {
+        double hypotenuse = 0.0;
+        hypotenuse = Math.sqrt(Math.pow(side1,2) + Math.pow(side2,2));
+
+        return hypotenuse;
+
+    }
+
+    public double calculateCharges(int hours) {
+        double charge = 2.0;
+
+        if (hours > 3){
+            charge = charge + (hours - 3) * 0.5;
+
+        }
+        return charge;
+    }
 }
