@@ -1,7 +1,6 @@
 package ChibobAss;
 
 import java.text.SimpleDateFormat;
-import java.util.Arrays;
 import java.util.Date;
 import java.util.Objects;
 import java.util.Scanner;
@@ -55,7 +54,7 @@ public class StoreReceipt {
 
         }
         double VAT = (17.50 / 100) * subTotal;
-        double billTotal = subTotal - discount + VAT;
+        double totalBill = subTotal - discount + VAT;
 
         String myStoreDetails = """
                         OLAMIDE STORES
@@ -69,13 +68,13 @@ public class StoreReceipt {
         System.out.println("-".repeat(50));
         System.out.println(receipt);
         System.out.println("-".repeat(50));
-        System.out.printf("%25s%10.2f%n", "Sub Total: ", (double)subTotal);
+        System.out.printf("%25s%10.2f%n", "Sub Total: ", subTotal);
         System.out.printf("%25s%10.2f%n","Discount: " ,discount);
-        System.out.printf("%25s%10.2f%n","VAT @ 17.50%: ", (double)VAT);
+        System.out.printf("%25s%10.2f%n","VAT @ 17.50%: ", VAT);
         System.out.println("=".repeat(50));
-        System.out.printf("%25s%10.2f%n", "Bill Total: ", (double)billTotal);
+        System.out.printf("%25s%10.2f%n", "Total Bill: ", totalBill);
         System.out.println("=".repeat(50));
-        System.out.println("THIS IS YOUR RECEIPT KINDLY PAY " + billTotal  );
+        System.out.println("THIS IS YOUR RECEIPT KINDLY PAY " + totalBill  );
         System.out.println("=".repeat(50));
 
 
