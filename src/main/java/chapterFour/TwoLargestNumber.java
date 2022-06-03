@@ -8,7 +8,7 @@ public class TwoLargestNumber {
         int number;
         int counter ;
         int largest;
-        int nextLargest;
+        int nextLargest = 0;
 
         System.out.print("Enter number of unit: ");
         largest = input.nextInt();
@@ -21,7 +21,7 @@ public class TwoLargestNumber {
                 largest = number;
             }else
                 nextLargest = number;
-            counter = 2;
+            counter = 1;
             while(counter < 10){
                 System.out.print("Enter number of unit: ");
                 number = input.nextInt();
