@@ -1,4 +1,4 @@
-package tdd.TurtleGraphics;
+package TurtleGraphics;
 
 public class SketchPad {
     public int[][] getFloor() {

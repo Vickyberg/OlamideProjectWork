@@ -1,11 +1,9 @@
-package tdd.TurtleGraphics;
-
-import static tdd.TurtleGraphics.Direction.*;
+package TurtleGraphics;
 
 public class Turtle {
         private boolean iSPenUp = true;
         private Position currentPosition = new Position(0,0);
-        private Direction currentDirection = EAST;
+        private Direction currentDirection = Direction.EAST;
         public boolean isPenUp() {
             return iSPenUp;
         }
@@ -20,18 +18,18 @@ public class Turtle {
         }
         public void turnRight() {
             switch (currentDirection) {
-                case EAST -> turn(SOUTH);
-                case SOUTH -> turn(WEST);
-                case WEST -> turn(NORTH);
-                case NORTH -> turn(EAST);
+                case EAST -> turn(Direction.SOUTH);
+                case SOUTH -> turn(Direction.WEST);
+                case WEST -> turn(Direction.NORTH);
+                case NORTH -> turn(Direction.EAST);
             }
         }
         public void turnLeft() {
             switch (currentDirection) {
-                case EAST -> turn(NORTH);
-                case SOUTH -> turn(EAST);
-                case WEST -> turn(SOUTH);
-                case NORTH -> turn(WEST);
+                case EAST -> turn(Direction.NORTH);
+                case SOUTH -> turn(Direction.EAST);
+                case WEST -> turn(Direction.SOUTH);
+                case NORTH -> turn(Direction.WEST);
             }
         }
         private void turn(Direction currentDirection){

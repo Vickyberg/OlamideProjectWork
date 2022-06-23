@@ -1,10 +1,13 @@
 package tdd.TurtleGraphics;
 
 
+import TurtleGraphics.Position;
+import TurtleGraphics.SketchPad;
+import TurtleGraphics.Turtle;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
-import static tdd.TurtleGraphics.Direction.*;
+import static TurtleGraphics.Direction.*;
 
 class TurtleTest {
     Turtle turtle;

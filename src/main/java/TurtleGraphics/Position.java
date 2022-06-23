@@ -1,4 +1,4 @@
-package tdd.TurtleGraphics;
+package TurtleGraphics;
 
 public class Position {
     private int row;
