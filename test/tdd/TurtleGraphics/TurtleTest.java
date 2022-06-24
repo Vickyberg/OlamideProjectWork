@@ -66,8 +66,7 @@ class TurtleTest {
     }
     @Test void moveEast(){
         assertSame(EAST, turtle.getCurrentLocation());
-        turtle.move(3,sc );
-        turtle.move(2,sc);
+        turtle.move(5,sc);
         assertEquals( new Position(0,5), turtle.getCurrentPosition());
     }
     @Test void moveSouth(){
@@ -114,5 +113,9 @@ class TurtleTest {
             assertEquals(1, floor[currentRow][i]);
         }
         sc.displaySketchPad();
+    }
+    @Test
+    void writeSouth(){
+
     }
 }
