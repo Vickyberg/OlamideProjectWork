@@ -11,7 +11,7 @@ public class AccountTest {
     @Test
     public void accountCanBeCreatedTest() {
 //given i have created an account
-        Account account = new Account();
+        Account account = new Account(1,"Olamide","1123");
         //when i check my balance
         int balance = account.getBalance();
         //confirm the balance is zero
@@ -21,21 +21,21 @@ public class AccountTest {
     @Test
     public void depositMoneyTest() {
         //given i have an account
-        Account olaAccount = new Account();
+        Account account = new Account(1,"Olamide","1123");
         //when i deposit money
-        olaAccount.deposit(1_500);
+        account.deposit(1_500);
         //check that my balance as change
-        assertEquals(1500, olaAccount.getBalance());
+        assertEquals(1500, account.getBalance());
 
 
     }
 
     @Test
     public void depositTwiceTest() {
-        Account uselessAccount = new Account();
-        uselessAccount.deposit(1_500);
-        uselessAccount.deposit(2000);
-        assertEquals(3500, uselessAccount.getBalance());
+        Account account = new Account(1,"Olamide","1123");
+        account.deposit(1_500);
+        account.deposit(2000);
+        assertEquals(3500, account.getBalance());
 
 
     }
@@ -43,38 +43,39 @@ public class AccountTest {
     @Test
     @DisplayName("Deposit negative amount should not change balance test")
     public void depositNegativeTest() {
-        Account olaAccount = new Account();
-        olaAccount.deposit(-1000);
-        assertEquals(0, olaAccount.getBalance());
+        Account account = new Account(1,"Olamide","1123");
+        account.deposit(-1000);
+        assertEquals(0, account.getBalance());
 
 
     }
+    // todo addition of pin to withdraw
 
     @Test
     public void withdrawTest() {
-        Account olaAccount = new Account();
-        olaAccount.deposit(3500);
-        olaAccount.withdraw(2000);
-        assertEquals(1500, olaAccount.getBalance());
+        Account account = new Account(1,"Olamide","1123");
+        account.deposit(3500);
+        account.withdraw(2000,"1234");
+        assertEquals(1500, account.getBalance());
 
     }
 
     @Test
     @DisplayName("withdraw negative amount should not change account")
     public void withdrawNegativeTest() {
-        Account olaAccount = new Account();
-        olaAccount.deposit(3500);
-        olaAccount.withdraw(-1);
-        assertEquals(3500, olaAccount.getBalance());
+        Account account = new Account(1,"Olamide","1123");
+        account.deposit(3500);
+        account.withdraw(-1,"1234");
+        assertEquals(3500, account.getBalance());
     }
 
     @Test
     @DisplayName("withdraw amount higher than balance should not affect account")
     public void withdrawHigherTest() {
-        Account olaAccount = new Account();
-        olaAccount.deposit(3500);
-        olaAccount.withdraw(4000);
-        assertEquals(3500, olaAccount.getBalance());
+        Account account = new Account(1,"Olamide","1123");
+        account.deposit(3500);
+        account.withdraw(4000,"1234");
+        assertEquals(3500, account.getBalance());
     }
 
 }
