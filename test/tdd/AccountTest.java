@@ -10,7 +10,7 @@ public class AccountTest {
 
     @Test
     public void accountCanBeCreatedTest() {
-//given i have created an account
+//given I have created an account
         Account account = new Account(1,"Olamide","1123");
         //when i check my balance
         int balance = account.getBalance();
@@ -43,7 +43,7 @@ public class AccountTest {
     @Test
     @DisplayName("Deposit negative amount should not change balance test")
     public void depositNegativeTest() {
-        Account account = new Account(1,"Olamide","1123");
+        Account account = new Account(1,"Olamide","1124");
         account.deposit(-1000);
         assertEquals(0, account.getBalance());
 
@@ -74,7 +74,7 @@ public class AccountTest {
     public void withdrawHigherTest() {
         Account account = new Account(1,"Olamide","1123");
         account.deposit(3500);
-        account.withdraw(4000,"1234");
+        account.withdraw(4000,"1233");
         assertEquals(3500, account.getBalance());
     }
 

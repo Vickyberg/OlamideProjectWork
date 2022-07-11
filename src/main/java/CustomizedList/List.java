@@ -1,2 +1,9 @@
-package CustomizedListTest;public interface List {
+package CustomizedList;
+
+public interface List {
+    boolean isEmpty();
+
+    void add(String item);
+//
+//    int getSize();
 }
