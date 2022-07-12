@@ -30,6 +30,6 @@ public class BasePlusCommissionEmployeePay extends  CommissionEmployeePay{
 
     @Override
     public String toString(){
-        return  String.format("%s%n %s%n %s%.2f%n","Base Salaried Employee: ",super.toString(),"Base salary >>",getBaseSalary());
+        return  String.format("%s%n %s%n %s%.2f%n","Base Salaried Employee: ",super.toString(),"Base salary >> ",getBaseSalary());
     }
 }

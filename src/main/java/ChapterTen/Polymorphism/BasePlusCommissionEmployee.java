@@ -1,6 +1,4 @@
-package ChapterTen;
-
-import ChapterTen.CommissionEmployee;
+package ChapterTen.Polymorphism;
 
 public class BasePlusCommissionEmployee extends CommissionEmployee {
     private  final String firstName;

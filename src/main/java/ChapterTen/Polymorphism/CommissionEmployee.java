@@ -1,4 +1,4 @@
-package ChapterTen;
+package ChapterTen.Polymorphism;
 //CommissionEmployee class represents an employee paid a
 //percentage of gross sales.
 

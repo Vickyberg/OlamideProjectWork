@@ -1,4 +1,7 @@
-package ChapterTen;
+package ChapterTen.Polymorphism;
+
+import ChapterTen.Polymorphism.BasePlusCommissionEmployee;
+import ChapterTen.Polymorphism.CommissionEmployee;
 
 public class PolymorphismTest {
     public static void main(String[] args) {
