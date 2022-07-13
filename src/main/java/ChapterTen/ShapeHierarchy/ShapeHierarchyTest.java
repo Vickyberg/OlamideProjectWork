@@ -1,6 +1,7 @@
 package ChapterTen.ShapeHierarchy;
 
 import java.util.Arrays;
+import java.util.Locale;
 
 public class ShapeHierarchyTest {
     public static void main(String[] args) {
@@ -31,21 +32,22 @@ public class ShapeHierarchyTest {
         System.out.println("=".repeat(40));
 
 
-
-            for (Shape shape: shapes){
                 for (int i = 0; i < shapes.length; i++) {
-                    if(shape instanceof ThreeDimensionalShape){
-                        System.out.printf("Shape at %d is %n%s%n ",i,shapes[i].getClass().getName());
+                    if(shapes[i] instanceof ThreeDimensionalShape){
+                        ThreeDimensionalShape threeDimensionalShape = (ThreeDimensionalShape) shapes[i];
+                        System.out.printf("%s%n Shape at %d is %s%n  ",shapes[i],i,shapes[i].getClass().getName());
+                        System.out.println("=".repeat(40));
+
 
                     }
-                    else if(shape instanceof  TwoDimensionalShape){
-                        System.out.printf("Shape at %d is %n%s%n ",i,shapes[i].getClass().getName());
-
-                    }
+                    else if (shapes[i] instanceof  TwoDimensionalShape){
+                        TwoDimensionalShape twoDimensionalShape = (TwoDimensionalShape) shapes[i];
+                        System.out.printf(" %s%n Shape at %d is %s%n ",shapes[i],i,shapes[i].getClass().getName());
+                        System.out.println("=".repeat(40));
                 }
 
         }
-        System.out.println("=".repeat(40));
+
 
 
 

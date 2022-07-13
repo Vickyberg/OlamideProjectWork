@@ -13,8 +13,6 @@ public class ThreeDimensionalShape extends TwoDimensionalShape{
     }
 
 
-
-
     @Override
     public String toString(){
         return String.format("%s%n %s%s%n",super.toString(),"Depth: ",getDepth());
