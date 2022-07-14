@@ -11,6 +11,6 @@ public class AssertClassTest {
 
         assert (number >= 0 && number <= 10) : "Bad Number: " + number ;
 
-        System.out.printf("You entered  %d%n", number);
+        System.out.printf("You entered  %d%n" , number);
     }
 }
