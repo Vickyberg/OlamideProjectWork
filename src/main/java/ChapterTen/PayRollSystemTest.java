@@ -16,27 +16,35 @@ public class PayRollSystemTest {
         BasePlusCommissionEmployeePay basePlusCommissionEmployeePay = new BasePlusCommissionEmployeePay("Victor",
                 "Obama","477-300-081",new Date(7,7,2022),1000,0.06,300);
 
+        PieceWorker pieceWorker = new PieceWorker("Joiner","James","234-553-434",
+                new Date(7,3,2022),12.33,3);
+
         System.out.println("=".repeat(75));
         System.out.println("EMPLOYEE PROCESSED INDIVIDUALLY");
         System.out.println("=".repeat(75));
 
-        System.out.printf("%n%s%n%s: $%,.2f%n%n", salariedEmployee, "earned", salariedEmployee.earnings());
+        System.out.printf("%n%s%n%s: $%,.2f%n%n", salariedEmployee, "Earned", salariedEmployee.earnings());
         System.out.println("=".repeat(75));
 
-        System.out.printf("%s%n%s: $%,.2f%n%n",  hourlyEmployee, "earned", hourlyEmployee.earnings());
+        System.out.printf("%s%n%s: $%,.2f%n%n",  hourlyEmployee, "Earned", hourlyEmployee.earnings());
         System.out.println("=".repeat(75));
 
-        System.out.printf("%s%n%s: $%,.2f%n%n",commissionEmployeePay, "earned", commissionEmployeePay.earnings());
+        System.out.printf("%s%n%s: $%,.2f%n%n",commissionEmployeePay, "Earned", commissionEmployeePay.earnings());
         System.out.println("=".repeat(75));
 
         System.out.printf("%s%n%s: $%,.2f%n%n", basePlusCommissionEmployeePay, "earned", basePlusCommissionEmployeePay.earnings());
         System.out.println("=".repeat(75));
 
-        Employee[] employees = new Employee [4];
+        System.out.printf("%s%n%s: $%,.2f%n",pieceWorker,"Earned",pieceWorker.earnings());
+        System.out.println("=".repeat(75));
+
+        Employee[] employees = new Employee [5];
         employees[0] = salariedEmployee;
         employees[1] = hourlyEmployee;
         employees[2] = commissionEmployeePay;
         employees[3] = basePlusCommissionEmployeePay;
+        employees[4] = pieceWorker;
+
 
         System.out.printf("EMPLOYEE PROCESSED POLYMORPHICALLY %n");
         System.out.println("=".repeat(75));
@@ -60,7 +68,7 @@ public class PayRollSystemTest {
         }
         for (Employee employee: employees){
             if(employee.getDate().getMonth() == 7 ){
-                System.out.printf("%s%n %n%s%n %s $%s%n",employee.toString(),"This is a bonus to celebrate your birthday!!","Earned >> ",employee.earnings() + 100);
+                System.out.printf("%s%n %n%s%n %s $%s%n",employee.toString(),"THIS IS A BONUS TO CELEBRATE YOUR BIRTHDAY!!\nHAPPY CELEBRATION :)","Earned >> ",employee.earnings() + 100);
                 System.out.println("=".repeat(75));
             }
         }
