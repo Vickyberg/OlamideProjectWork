@@ -1,15 +1,15 @@
 package ChapterSeven.CreatingAndManipulationOfArray;
 
-public class ListInitializer {
+public class StoringCalculatedValueInArray {
     public static void main(String[] args) {
-        int[] array = {34,55,21,44,53,54,63,14,66,23};
+          final int ARRAY_LENGTH = 10;
+        int [] array = new int[ARRAY_LENGTH];
 
         System.out.printf("%s%6s%n","Index","Value");
+
         for (int i = 0; i < array.length; i++) {
-
+            array[i] =  2 +  2 * i;
             System.out.printf("%4d%5d%n",i,array[i]);
-
-
 
         }
     }
