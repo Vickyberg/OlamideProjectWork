@@ -1,10 +1,13 @@
 package ChapterTen;
 
+import ChapterEight.Composition.Date;
+
+
 public class HourlyEmployee extends Employee {
     private double wage; //wage per hour
     private double hours; //hours in a week
-    public HourlyEmployee(String firstName, String secondName, String socialSecurityNumber,double wage,double hours) {
-        super(firstName, secondName, socialSecurityNumber);
+    public HourlyEmployee(String firstName, String secondName, String socialSecurityNumber, Date date, double wage, double hours) {
+        super(firstName, secondName, socialSecurityNumber,date);
 
         if(hours < 0.0 || hours > 168.0){
             throw new IllegalArgumentException("Hours must be >= 0.0 and <= 168.0");
@@ -41,6 +44,12 @@ public class HourlyEmployee extends Employee {
         this.hours = hours;
     }
 
+
+    @Override
+    public Date getDate() {
+        return new Date(2,7,2022);
+    }
+
     @Override
     public double earnings() {
         if(getHours() <= 40){
@@ -52,7 +61,7 @@ public class HourlyEmployee extends Employee {
 
     @Override
     public String toString(){
-        return String.format("%s%n %s%n%s $%,.2f%n %s%s hrs%n%n","Hourly Employee: ",super.toString(),"Wage >> ",getWage(),"Hours Worked >> ",getHours());
+        return String.format("%s%n %s%n%s $%,.2f%n %s%s hrs%n%n ","Hourly Employee: ",super.toString(),"Wage >> ",getWage(),"Hours Worked >> ",getHours());
     }
 
 }

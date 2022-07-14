@@ -1,10 +1,12 @@
 package ChapterTen;
 
+import ChapterEight.Composition.Date;
+
 public class BasePlusCommissionEmployeePay extends  CommissionEmployeePay{
     private double baseSalary;
-    public BasePlusCommissionEmployeePay(String firstName, String secondName, String socialSecurityNumber,
-                                     double grossSales, double commissionRate,double baseSalary) {
-        super(firstName, secondName, socialSecurityNumber, grossSales, commissionRate);
+    public BasePlusCommissionEmployeePay(String firstName, String secondName, String socialSecurityNumber, Date date,
+                                     double grossSales, double commissionRate, double baseSalary) {
+        super(firstName, secondName, socialSecurityNumber,date, grossSales, commissionRate);
 
         if(baseSalary < 0.0){
             throw new IllegalArgumentException("Base salary must be >= 0.0");
@@ -23,6 +25,8 @@ public class BasePlusCommissionEmployeePay extends  CommissionEmployeePay{
         this.baseSalary = baseSalary;
     }
 
+
+
     @Override
     public double earnings(){
         return  getBaseSalary() + super.earnings();
@@ -30,6 +34,6 @@ public class BasePlusCommissionEmployeePay extends  CommissionEmployeePay{
 
     @Override
     public String toString(){
-        return  String.format("%s%n %s%n %s%.2f%n","Base Salaried Employee: ",super.toString(),"Base salary >> ",getBaseSalary());
+        return  String.format("%s%n %s%n %s$%.2f%n","Base Salaried Employee: ",super.toString(),"Base salary >> ",getBaseSalary());
     }
 }

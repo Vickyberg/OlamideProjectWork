@@ -1,15 +1,19 @@
 package ChapterTen;
 //Employee class which is an abstract superclass
 
+import ChapterEight.Composition.Date;
+
 public abstract class Employee {
     private  final String firstName;
     private  final String secondName;
     private final String socialSecurityNumber;
+    private final Date date;
 
-    public Employee(String firstName, String secondName, String socialSecurityNumber) {
+    public Employee(String firstName, String secondName, String socialSecurityNumber, Date date) {
         this.firstName = firstName;
         this.secondName = secondName;
         this.socialSecurityNumber = socialSecurityNumber;
+        this.date = date;
     }
 
     public String getFirstName() {
@@ -24,10 +28,15 @@ public abstract class Employee {
         return socialSecurityNumber;
     }
     // abstract method without implementation
+
+
+    public abstract Date getDate();
+
+
     public abstract double earnings();
 
     @Override
     public String toString(){
-        return String.format("%s%s %s%n %s%s","Name >> ",getFirstName(),getSecondName(),"Social Security number >> ",getSocialSecurityNumber());
+        return String.format("%s%s %s%n %s%s%n %s%s%n","Name >> ",getFirstName(),getSecondName(),"Social Security number >> ",getSocialSecurityNumber(),"Birth Date >> ",getDate());
     }
 }

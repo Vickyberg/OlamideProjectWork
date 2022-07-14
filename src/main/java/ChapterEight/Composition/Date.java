@@ -1,9 +1,9 @@
 package ChapterEight.Composition;
 
 public class Date {
-    private int month;
-    private int day;
-    private int year;
+    private final int month;
+    private final int day;
+    private final int year;
     private static final int [] daysPerMonth = {0, 31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31};
 
     public Date(int month, int day, int year) {
@@ -20,11 +20,23 @@ public class Date {
         this.month = month;
         this.day = day;
         this.year = year;
-        System.out.printf("Date object constructor for date %s%n", this);
+
     }
 
-        public String toString() {
-             return String.format("%d/%d/%d", month, day, year);
+    public int getMonth() {
+        return month;
+    }
+
+    public int getDay() {
+        return day;
+    }
+
+    public int getYear() {
+        return year;
+    }
+
+    public String toString() {
+             return String.format("%d/%d/%d", getMonth(), getDay(), getYear());
         }
     }
 

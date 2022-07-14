@@ -1,10 +1,13 @@
 package ChapterTen;
 
+import ChapterEight.Composition.Date;
+
 public class CommissionEmployeePay extends Employee {
     private double grossSales;
     private double commissionRate;
-    public CommissionEmployeePay(String firstName, String secondName, String socialSecurityNumber,double grossSales,double commissionRate) {
-        super(firstName, secondName, socialSecurityNumber);
+
+    public CommissionEmployeePay(String firstName, String secondName, String socialSecurityNumber, Date date, double grossSales, double commissionRate) {
+        super(firstName, secondName, socialSecurityNumber, date);
 
         if(grossSales < 0.0){
             throw new IllegalArgumentException("Gross sales must be >= 0.0");
@@ -16,6 +19,7 @@ public class CommissionEmployeePay extends Employee {
             throw new IllegalArgumentException("Commission rate must >= 0.0 and <= 1.0");
         }
         this.commissionRate = commissionRate;
+
     }
 
     public double getGrossSales() {
@@ -42,6 +46,12 @@ public class CommissionEmployeePay extends Employee {
         this.commissionRate = commissionRate;
     }
 
+
+    @Override
+    public Date getDate() {
+        return new Date(6,7,2022);
+    }
+
     @Override
     public double earnings() {
         return getGrossSales() *  getCommissionRate();
@@ -49,7 +59,7 @@ public class CommissionEmployeePay extends Employee {
 
     @Override
     public  String toString(){
-        return String.format("%s%n %s%n %s%.2f%n %s%.2f%n","Commission Employee: ",
+        return String.format("%s%n %s%n %s$%.2f%n %s%.2f%n","Commission Employee: ",
                 super.toString(),"Gross sale >> ", getGrossSales(),"Commission Rate >> ", getCommissionRate());
     }
 }
