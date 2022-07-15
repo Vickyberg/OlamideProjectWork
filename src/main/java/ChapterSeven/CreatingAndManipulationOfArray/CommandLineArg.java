@@ -10,7 +10,7 @@ public class CommandLineArg {
             int arrayLength = Integer.parseInt(args[0]);
             int[] array = new int[arrayLength];
 
-            int initialValue = Integer.parseInt(args[0]);
+            int initialValue = Integer.parseInt(args[1]);
             int increment = Integer.parseInt(args[2]);
 
             for (int i = 0; i < array.length; i++) {
