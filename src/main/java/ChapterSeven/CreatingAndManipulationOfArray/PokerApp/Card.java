@@ -8,7 +8,9 @@ public class Card {
         this.face = face;
         this.suit = suit;
     }
+
     public String toString(){
-        return face + "of" + suit;
+        return face + "Of" + suit;
     }
+
 }
