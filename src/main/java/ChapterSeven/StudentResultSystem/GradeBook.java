@@ -1,93 +1,91 @@
 package ChapterSeven.StudentResultSystem;
 
 public class GradeBook {
+    String [] student;
+    String [] subject;
+    double [] total;
 
 
-     int [][] gradeBook;
+     int [][] scores;
 
-    public GradeBook(int[][] gradeBook) {
-        this.gradeBook = gradeBook;
+    public GradeBook(int numberOfStudents, int numberOfSubjects) {
+        student = new String[numberOfStudents];
+        subject = new String[numberOfSubjects];
+        scores = new int[numberOfStudents][numberOfSubjects];
     }
-    public int getMinimum(){
-        int lowGrade = gradeBook[0][0];
-        for(int studentGrade[] : gradeBook){
-            for(int grade : studentGrade){
-                if(grade < lowGrade){
-                    lowGrade = grade;
+
+
+    public void addStudent(int indexOfStudent, String studentName){
+        student[indexOfStudent] = studentName ;
+
+    }
+
+    public String getStudent(int indexOfStudent){
+        return student[indexOfStudent];
+
+    }
+    public void addSubject(int indexOfSubject, String subjectName){
+        subject[indexOfSubject] = subjectName;
+    }
+
+    public String getSubject(int indexOfSubject){
+        return subject[indexOfSubject];
+
+    }
+
+    public  void addScore(int indexOfStudent, int indexOfSubject, int score){
+        scores[indexOfStudent][indexOfSubject] = score;
+
+    }
+    public int getMinimum(int [][] setOfScores){
+        int lowestGrade = setOfScores[0][0];
+        for (int score = 0; score < setOfScores.length;score++){
+            for(int grade = 0; grade < setOfScores.length;grade++){
+                if(score <lowestGrade){
+                    lowestGrade= score;
                 }
             }
         }
-        return lowGrade;
+        return lowestGrade;
+
+
     }
 
-    public int getMaximum(){
-        int highGrade = gradeBook[0][0];
-        for (int studentGrades[] : gradeBook){
-            for(int grade : studentGrades){
-                if (grade > highGrade){
-                    highGrade = grade;
+    public int getMaximum(int [][] setOfScores ){
+        int highestGrade = setOfScores[0][0];
+        for (int score = 0; score < setOfScores.length;score++){
+            for(int grade = 0; grade < setOfScores.length;grade++){
+                if(score > highestGrade){
+                    highestGrade = score;
                 }
             }
         }
-        return highGrade;
-    }
-    public double getAverage(int [] setOfGrades){
-        int total = 0;
-        for (int grade : setOfGrades){
-            total += grade;
-        }
-        return (double) total / setOfGrades.length;
+        return highestGrade;
+
 
     }
-    public double getTotal(int[] setOfGrades){
-        int total = 0;
-        for (int grade : setOfGrades){
-            total += grade;
+    public double getAverage(int [] setOfScores){
+        double average = 0.0;
+        for (int score = 0; score < setOfScores.length;score++){
+            average = getTotal(setOfScores) / setOfScores.length;
+        }
+        return average;
+
+    }
+
+    public void setTotal(double[] total) {
+        this.total = total;
+    }
+
+    public double getTotal(int[] setOfScores){
+        double total =0;
+        for(int score = 0;score< setOfScores.length; score++){
+             total += score;
         }
         return total;
     }
-    public int getPosition(int [] average,int student ){
-        int position1 = average[0];
-        int position2 = average[0];
-        int position3 = average[0];
-        for(int avg : average){
-            if(average[avg] > position1){
-                position2 = position3;
-                position2 = position1;
-                position1 = average[avg];
 
-            }
-        }
-        int position = 0;
-        if(average[student -1] == position1){
-            position =1;
-        } if (average[student-1]== position2) {
-            position =2;
-
-        } if (average[student -1]== position3){
-            position3 = 3;
-        }
-        return position;
-    }
-
-    public void outputBook(){
-
-        for(int sub = 0; sub < gradeBook[0].length;sub++ ){
-            System.out.printf("%4s%d%2s","SUB", sub + 1,"");
-        }
-        System.out.printf("%5s%s%s%n","TOT","AVG","POS");
-
-        for(int student= 0;student < gradeBook.length;student++ ){
-            System.out.printf("Student %2d", student + 1);
-            for(int score : gradeBook[student]){
-                System.out.printf("%8d",score);
-            }
-            double total = getTotal(gradeBook[student]);
-            System.out.printf("%9.2f%n",total);
-            double average  = getAverage(gradeBook[student]);
-            System.out.printf("%9.2f%n",average);
-
-        }
+    public void outputGradeBook(){
 
 
     }
