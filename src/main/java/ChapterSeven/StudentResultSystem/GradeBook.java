@@ -84,8 +84,20 @@ public class GradeBook {
         }
         return total;
     }
+    public String getSubjectName(String [] subjects){
+        String subjectName = null;
+        for(int sub = 0; sub < subjects.length; sub++){
+            subjectName = subjects[sub];
+        }
+        return subjectName;
+    }
 
     public void outputGradeBook(){
+        System.out.println("=".repeat(50));
+        System.out.printf("%30s%n","GRADE BOOK ");
+        System.out.println("=".repeat(50));
+
+        System.out.printf("%s","STUDENT" );
 
 
     }
