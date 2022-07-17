@@ -84,10 +84,11 @@ public class GradeBook {
         }
         return total;
     }
-    public String getSubjectName(String [] subjects){
+    public String getSubjectsName(String [] subjects) {
+
         String subjectName = null;
-        for(int sub = 0; sub < subjects.length; sub++){
-            subjectName = subjects[sub];
+        for (String sub : subjects) {
+            subjectName = sub;
         }
         return subjectName;
     }
@@ -96,11 +97,10 @@ public class GradeBook {
         System.out.println("=".repeat(50));
         System.out.printf("%30s%n","GRADE BOOK ");
         System.out.println("=".repeat(50));
-
-        System.out.printf("%s","STUDENT" );
-
+        System.out.printf("%s%10s%10s%10s%10s","STUDENT",getSubjectsName(subject),"TOTAL","AVG","POS");
 
     }
+
 
 
 
