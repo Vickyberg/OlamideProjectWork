@@ -99,12 +99,38 @@ public class GradeBook {
         System.out.println("=".repeat(50));
         System.out.printf("%s%10s%10s%10s%10s%n","STUDENT",getSubjectName(subject),"TOTAL","AVG","POS");
         System.out.println("=".repeat(50));
+        System.out.println();
+        System.out.println("=".repeat(50));
         getSummary();
 
 
     }
     public void getSummary(){
-        System.out.println("SUBJECT SUMMARY");
+        System.out.printf("%25s%n","SUBJECTS SUMMARY");
+        System.out.printf("%s %s",getSubjectName(subject),"Summary:");
+        System.out.println("The Highest Scoring Student: ");
+        System.out.println("The Lowest Scoring Student: ");
+        System.out.println("Total Score is: ");
+        System.out.println("Average Score: ");
+        System.out.println("Number of Passes: ");
+        System.out.println("Number of Fails: ");
+        System.out.println("The Hardest Subject is (subjectName) with %s failures ");
+        System.out.println("The Easiest Subject is (subjectName) with %s passes");
+        System.out.println("The Overall Highest score is scored by (student name) scoring (get score)");
+        System.out.println("The Overall Lowest score is scored by (student name) scoring (get score) ");
+        System.out.println("=".repeat(50));
+        System.out.printf("%25s%n","CLASS SUMMARY");
+        System.out.println("=".repeat(50));
+        System.out.println("Best Graduating student is : (get student) scoring (total score)");
+        System.out.println();
+        System.out.println("Worst Graduating Student is : (get student) scoring (total score) ");
+        System.out.println("=".repeat(50));
+        System.out.println("Class Total Score is: (get total)");
+        System.out.println("Class Average Score is: (get average)");
+        System.out.println("=".repeat(50));
+
+
+
 
 
 
