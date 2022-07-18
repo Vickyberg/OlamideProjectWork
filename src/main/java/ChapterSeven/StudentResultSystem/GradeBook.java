@@ -29,8 +29,16 @@ public class GradeBook {
     }
 
     public String getSubject(int indexOfSubject){
-        return subject[indexOfSubject];
 
+        return subject[indexOfSubject];
+    }
+
+    public  String getSubjectName(String [] subjects){
+        String subjectName = "";
+        for(int sub = 0; sub < subjects.length; sub++){
+            subjectName = subject[sub];
+        }
+        return subjectName;
     }
 
     public  void addScore(int indexOfStudent, int indexOfSubject, int score){
@@ -84,20 +92,22 @@ public class GradeBook {
         }
         return total;
     }
-    public String getSubjectsName(String [] subjects) {
-
-        String subjectName = null;
-        for (String sub : subjects) {
-            subjectName = sub;
-        }
-        return subjectName;
-    }
 
     public void outputGradeBook(){
         System.out.println("=".repeat(50));
         System.out.printf("%30s%n","GRADE BOOK ");
         System.out.println("=".repeat(50));
-        System.out.printf("%s%10s%10s%10s%10s","STUDENT",getSubjectsName(subject),"TOTAL","AVG","POS");
+        System.out.printf("%s%10s%10s%10s%10s%n","STUDENT",getSubjectName(subject),"TOTAL","AVG","POS");
+        System.out.println("=".repeat(50));
+        getSummary();
+
+
+    }
+    public void getSummary(){
+        System.out.println("SUBJECT SUMMARY");
+
+
+
 
     }
 
