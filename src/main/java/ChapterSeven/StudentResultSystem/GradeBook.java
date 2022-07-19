@@ -106,7 +106,7 @@ public class GradeBook {
 
     }
     public void getSummary(){
-        System.out.printf("%25s%n","SUBJECTS SUMMARY");
+        System.out.printf("%35s%n","SUBJECTS SUMMARY");
         System.out.printf("%s %s",getSubjectName(subject),"Summary:");
         System.out.println("The Highest Scoring Student: ");
         System.out.println("The Lowest Scoring Student: ");
@@ -119,7 +119,7 @@ public class GradeBook {
         System.out.println("The Overall Highest score is scored by (student name) scoring (get score)");
         System.out.println("The Overall Lowest score is scored by (student name) scoring (get score) ");
         System.out.println("=".repeat(50));
-        System.out.printf("%25s%n","CLASS SUMMARY");
+        System.out.printf("%32s%n","CLASS SUMMARY");
         System.out.println("=".repeat(50));
         System.out.println("Best Graduating student is : (get student) scoring (total score)");
         System.out.println();
