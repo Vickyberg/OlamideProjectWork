@@ -47,4 +47,18 @@ public class PhoneBook {
         contacts.add(newContact);
 
     }
+
+    public void deleteContact(int contactId) {
+        int initialArrayList = contacts.size();
+        for(Contact contact : contacts){
+            if(contact.getContactId() == contactId){
+                contacts.remove(contact);
+                break;
+            }
+        }
+    }
+
+    public int getContactNumber() {
+        return contacts.size();
+    }
 }

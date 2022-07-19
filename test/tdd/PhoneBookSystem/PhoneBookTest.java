@@ -20,7 +20,7 @@ public class PhoneBookTest {
     }
 
        @Test
-        void testWeCanHaveListOfContact() throws Exception {
+        void testWeCanHaveListOfContactInPhoneBook() throws Exception {
             myPhoneBook = new PhoneBook("Contact PhoneBook");
             myPhoneBook.createContact(1, "Olamide", "Victor",
                     "32,Emily Akinola,Akoka", "233-442-2442", "Olfkrm@gmail.com");
@@ -43,13 +43,25 @@ public class PhoneBookTest {
         }
 
         @Test
-    void testWeCanDeleteContactFromTheList(){
+    void testWeCanDeleteContactFromThePhoneBook(){
         myPhoneBook = new PhoneBook("Contact PhoneBook");
-        myPhoneBook.addContact(1, "Olamide", "Victor",
+        myPhoneBook.createContact(1, "Olamide", "Victor",
                 "32,Emily Akinola,Akoka", "233-442-2442", "Olfkrm@gmail.com");
+        myPhoneBook.deleteContact(1);
+        assertEquals(0,myPhoneBook.getContactNumber());
 
 
-;        }
+       }
+       @Test
+    void testWeCanEditContactInThePhoneBook() throws Exception {
+           myPhoneBook = new PhoneBook("Contact PhoneBook");
+           myPhoneBook.addContact(1, "Olamide", "Victor",
+                   "32,Emily Akinola,Akoka", "233-442-2442", "Olfkrm@gmail.com");
+           Contact newContact = myPhoneBook.getContact(1);
+           newContact.setAddress("Sabo,Yaba");
+           assertEquals("Sabo,Yaba",newContact.getAddress());
+
+       }
 
     }
 
