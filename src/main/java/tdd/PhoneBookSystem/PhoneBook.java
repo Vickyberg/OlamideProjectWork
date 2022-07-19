@@ -5,6 +5,7 @@ import java.util.ArrayList;
 
 public class PhoneBook {
     private String phoneBookType;
+    private int size;
     private ArrayList<Contact> contacts;
     private boolean isEmpty = true;
 

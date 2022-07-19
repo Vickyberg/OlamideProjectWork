@@ -1,5 +1,6 @@
 package tdd.PhoneBookSystem;
 
+
 import java.util.Objects;
 import java.util.Scanner;
 
@@ -7,7 +8,7 @@ public class PhoneBookMain {
     static Scanner userInput = new Scanner(System.in);
 
     public static void main(String[] args) {
-        PhoneBook myPhoneBook = new PhoneBook("Contact PhoneBook");
+
 
         System.out.println("=".repeat(50));
         System.out.printf("%35s%n","WELCOME TO YOUR PHONEBOOK");
@@ -22,10 +23,26 @@ public class PhoneBookMain {
                 case 1:
                     createContact();
                     break;
+                case 2:
+                    viewContacts();
+                    break;
+                case 3:
+                    deleteContact();
+                default:
+
+
 
 
             }
         }
+
+    }
+
+    private static void deleteContact() {
+    }
+
+    private static void viewContacts() {
+
 
     }
 
@@ -48,9 +65,11 @@ public class PhoneBookMain {
         response = userInput.nextLine();
         if(Objects.equals(response, "Yes")){
             createContact();
+            userInput.nextLine();
 
         }else
             mainMenu();
+        userInput.nextLine();
 
 
 
