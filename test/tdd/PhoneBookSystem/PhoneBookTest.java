@@ -62,6 +62,20 @@ public class PhoneBookTest {
            assertEquals("Sabo,Yaba",newContact.getAddress());
 
        }
+       @Test
+    void testThatAllContactCanBeViewed() throws Exception {
+           myPhoneBook = new PhoneBook("Contact PhoneBook");
+           myPhoneBook.addContact(1, "Olamide", "Victor",
+                   "32,Emily Akinola,Akoka", "233-442-2442", "Olfkrm@gmail.com");
+           Contact newContact = myPhoneBook.getContact(1);
+           assertEquals(1,myPhoneBook.getCount());
+           myPhoneBook.addContact(2, "Olamide", "Victor",
+                   "32,Emily Akinola,Akoka", "233-442-2442", "Olfkrm@gmail.com");
+           Contact newContact2 = myPhoneBook.getContact(2);
+           assertEquals(2,newContact2.getContactId());
+           myPhoneBook.getCount();
+           assertEquals(2,myPhoneBook.getCount());
+       }
 
     }
 

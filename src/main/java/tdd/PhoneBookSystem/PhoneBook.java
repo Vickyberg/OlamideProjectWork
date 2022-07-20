@@ -5,7 +5,7 @@ import java.util.ArrayList;
 
 public class PhoneBook {
     private String phoneBookType;
-    private int size;
+    private int counter;
     private ArrayList<Contact> contacts;
     private boolean isEmpty = true;
 
@@ -27,14 +27,23 @@ public class PhoneBook {
     }
 
     public Contact getContact(int contactId) throws Exception {
-        for (Contact contact : contacts){
+    Contact foundContact = findById(contactId);
+    for (var contact : contacts){
+        if(contact == foundContact){
+            return contact ;
+        }
+    }
+
+        throw new Exception("Contact Not Found!!");
+    }
+
+    private Contact findById(int contactId) {
+        for (var contact: contacts){
             if(contact.getContactId() == contactId){
                 return contact;
             }
-
         }
-
-        throw new Exception("Contact Not Found!!");
+        return null;
     }
 
     public ArrayList<Contact> getContacts(){
@@ -61,5 +70,9 @@ public class PhoneBook {
 
     public int getContactNumber() {
         return contacts.size();
+    }
+
+    public int getCount() {
+        return  contacts.size();
     }
 }
