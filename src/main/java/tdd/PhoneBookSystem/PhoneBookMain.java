@@ -7,11 +7,14 @@ import java.util.Scanner;
 public class PhoneBookMain {
     static Scanner userInput = new Scanner(System.in);
 
-    public static void main(String[] args) {
 
+    public static void main(String[] args) {
+        System.out.println("Enter PhoneBook Type");
+        String phoneBook = userInput.nextLine();
+        PhoneBook myPhoneBook = new PhoneBook(phoneBook);
 
         System.out.println("=".repeat(50));
-        System.out.printf("%35s%n","WELCOME TO YOUR PHONEBOOK");
+        System.out.printf("%20s %s %s%n","WELCOME TO",phoneBook.toUpperCase(),"PHONEBOOK");
         System.out.println("=".repeat(50));
         mainMenu();
         System.out.println("=".repeat(50));
@@ -20,21 +23,30 @@ public class PhoneBookMain {
         while (userResponse != -1) {
 
             switch (userResponse) {
-                case 1:
+                case 1 -> {
                     createContact();
-                    break;
-                case 2:
+                    userResponse = userInput.nextInt();
+                }
+                case 2 -> {
                     viewContacts();
-                    break;
-                case 3:
+                    userResponse = userInput.nextInt();
+                }
+
+                case 3 -> {
                     deleteContact();
-                default:
-
-
-
-
+                    userResponse = userInput.nextInt();
+                }
+                case 4 -> {
+                    editContact();
+                    userResponse = userInput.nextInt();
+                }
             }
         }
+
+    }
+
+    private static void editContact() {
+
 
     }
 
@@ -44,6 +56,7 @@ public class PhoneBookMain {
     private static void viewContacts() {
 
 
+
     }
 
     private static void createContact() {
@@ -51,25 +64,30 @@ public class PhoneBookMain {
 
         System.out.println("Create Contact");
         System.out.printf("Enter First Name%n%s",">>> ");
-        userInput.nextLine();
+        String firstName = userInput.nextLine();
         userInput.nextLine();
         System.out.printf("Enter Second Name%n%s",">>> ");
-        userInput.nextLine();
+        String secondName = userInput.nextLine();
         System.out.printf("Enter Address%n%s",">>> ");
-        userInput.nextLine();
+        String address = userInput.nextLine();
         System.out.printf("Enter Phone Number%n%s",">>> ");
-        userInput.nextLine();
+        String phoneNumber =userInput.nextLine();
         System.out.printf("Enter Email%n%s",">>> ");
-        userInput.nextLine();
+        String email = userInput.nextLine();
         System.out.println("Add More Contact?");
         response = userInput.nextLine();
-        if(Objects.equals(response, "Yes")){
-            createContact();
-            userInput.nextLine();
+        if(Objects.equals(response, "yes")){
 
-        }else
-            mainMenu();
-        userInput.nextLine();
+            createContact();
+
+        }else {
+         mainMenu();
+         userInput.nextInt();
+
+        }
+
+
+
 
 
 
@@ -78,8 +96,9 @@ public class PhoneBookMain {
         System.out.println("""
                 1: Create Contact
                 2: View Contacts In PhoneBook
-                3: Delete Contact
-                4: Exit
+                3: Edit Contact
+                4: Delete Contact
+                5: Exit
                 """);
     }
 }

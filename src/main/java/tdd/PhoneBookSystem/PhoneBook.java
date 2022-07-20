@@ -12,7 +12,7 @@ public class PhoneBook {
     public PhoneBook(String  phoneBookType) {
         this.phoneBookType = phoneBookType;
 
-        this.contacts = new ArrayList<Contact>();
+        this.contacts = new ArrayList<>();
     }
     public boolean isEmpty() {
         return isEmpty;
@@ -59,7 +59,6 @@ public class PhoneBook {
     }
 
     public void deleteContact(int contactId) {
-        int initialArrayList = contacts.size();
         for(Contact contact : contacts){
             if(contact.getContactId() == contactId){
                 contacts.remove(contact);
@@ -74,5 +73,10 @@ public class PhoneBook {
 
     public int getCount() {
         return  contacts.size();
+    }
+
+    @Override
+    public String toString(){
+        return String.format("%s",super.toString());
     }
 }
