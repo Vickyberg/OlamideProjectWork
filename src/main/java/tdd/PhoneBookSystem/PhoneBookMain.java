@@ -62,7 +62,7 @@ public class PhoneBookMain {
     private static void createContact() {
         String response ;
 
-        System.out.println("Create Contact");
+        System.out.println("REGISTER");
         System.out.printf("Enter First Name%n%s",">>> ");
         String firstName = userInput.nextLine();
         userInput.nextLine();
@@ -94,8 +94,8 @@ public class PhoneBookMain {
     }
     private  static void mainMenu(){
         System.out.println("""
-                1: Create Contact
-                2: View Contacts In PhoneBook
+                1: Register
+                2: View Contacts
                 3: Edit Contact
                 4: Delete Contact
                 5: Exit
