@@ -1,6 +1,5 @@
 package tdd.PhoneBookSystem;
 
-
 import java.util.Objects;
 import java.util.Scanner;
 
@@ -13,6 +12,7 @@ public class PhoneBookMain {
         String phoneBook = userInput.nextLine();
         PhoneBook myPhoneBook = new PhoneBook(phoneBook);
 
+
         System.out.println("=".repeat(50));
         System.out.printf("%20s %s %s%n","WELCOME TO",phoneBook.toUpperCase(),"PHONEBOOK");
         System.out.println("=".repeat(50));
@@ -24,8 +24,11 @@ public class PhoneBookMain {
 
             switch (userResponse) {
                 case 1 -> {
-                    createContact();
-                    userResponse = userInput.nextInt();
+
+                        createContact();
+                        userResponse = userInput.nextInt();
+
+
                 }
                 case 2 -> {
                     viewContacts();
