@@ -10,8 +10,5 @@ public class CustomerTest {
     void setUp(){
         myCustomer = new Customer("Ola","Dayo","M","wrgwwef@gmail.com","Juno Africa,Akoka","2442","rgerg453");
     }
-    @Test
-    void weCanHaveACustomerTest(){
-        
-    }
+
 }
