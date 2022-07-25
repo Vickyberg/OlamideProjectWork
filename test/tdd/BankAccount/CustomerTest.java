@@ -11,7 +11,8 @@ public class CustomerTest {
     Customer myCustomer;
     @BeforeEach
     void setUp(){
-        myCustomer = new Customer("Ola","Dayo","M","wrgwwef@gmail.com","Juno Africa,Akoka","2442","rgerg453");
+        myCustomer = new Customer("Ola","Dayo","M","wrgwwef@gmail.com",
+                "Juno Africa,Akoka","2442","rgerg453");
     }
     @Test
     void testWeHaveACustomer(){
@@ -26,6 +27,20 @@ public class CustomerTest {
     void testWeCanGetCustomerLastName(){
         assertEquals("Dayo" ,myCustomer.getLastName());
     }
+    @Test
+    void testWeCanGetCustomerGender(){
+        assertEquals("M", myCustomer.getGender());
+    }
+    @Test
+    void testWeCanGetCustomerEmail(){
+        assertEquals("wrgwwef@gmail.com", myCustomer.getEmail());
+    }
+    @Test
+    void testWeCanGetCustomerAddress(){
+        assertEquals("Juno Africa,Akoka", myCustomer.getAddress());
+
+    }
+
 
 
 }
