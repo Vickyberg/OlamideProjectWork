@@ -44,7 +44,7 @@ public class StringCompare {
         if(s3.regionMatches(true,0,s4,0,5)){
             System.out.println("The first Character of s3 and s4 match with case ignored ");
         }else {
-            System.out.println("Thw first character of s3 and s4 do not match");
+            System.out.println("The first character of s3 and s4 do not match");
         }
         System.out.println("=".repeat(50));
 
