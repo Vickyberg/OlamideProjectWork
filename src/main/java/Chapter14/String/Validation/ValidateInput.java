@@ -4,7 +4,7 @@ package Chapter14.String.Validation;
 public class ValidateInput {
 
     public  static boolean validateFirstName(String firstName){
-        return firstName.matches("[A-Z][a-zA-Z]");
+        return firstName.matches("[A-Z][a-zA-Z]*");
     }
 
     public  static boolean validateLastName(String lastName){
