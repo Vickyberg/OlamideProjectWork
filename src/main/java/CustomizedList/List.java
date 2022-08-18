@@ -1,6 +1,6 @@
 package CustomizedList;
 
-public interface List {
+public interface List<S> {
     boolean isEmpty();
 
     void add(String item);

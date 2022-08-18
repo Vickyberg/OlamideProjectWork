@@ -1,6 +1,6 @@
 package CustomizedList;
 
-public class ArrayList implements List {
+public class ArrayList implements List<S> {
     private  boolean isEmpty = true;
     private  int size = 0;
     private String item;

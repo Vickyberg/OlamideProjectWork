@@ -8,7 +8,7 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
 public class ArrayListTest {
-    List list;
+    List<S> list;
     @BeforeEach
     void setUp() {
         list = new ArrayList();
