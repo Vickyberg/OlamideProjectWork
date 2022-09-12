@@ -26,5 +26,6 @@ public class IntStreamOperations {
                 .sorted()
                 .mapToObj(String :: valueOf)
                 .collect(Collectors.joining(" ")));
+        System.out.println(IntStream.of(values).summaryStatistics());
     }
 }
