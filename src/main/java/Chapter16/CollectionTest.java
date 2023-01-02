@@ -5,7 +5,7 @@ import java.util.Collection;
 import java.util.Iterator;
 import java.util.List;
 
-public class CollectionTest {
+public class        CollectionTest {
     public static void main(String[] args) {
         String [] colors = {"MAGENTA","RED","WHITE","BLUE","CYAN"};
         List<String> list = new ArrayList<>();

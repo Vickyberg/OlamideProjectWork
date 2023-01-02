@@ -6,6 +6,7 @@ import java.util.ListIterator;
 
 public class LinkTest {
     public static void main(String[] args) {
+
         String[] colors = {"black", "yellow", "green", "blue", "violet", "silver"};
          List<String> list1 = new LinkedList<>();
          for(String color : colors){
