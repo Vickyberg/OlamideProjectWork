@@ -1,6 +1,8 @@
 package Chapter16;
 
 
+import java.util.Arrays;
+import java.util.Collections;
 import java.util.List;
 
 public class DecksOfCards {
@@ -18,7 +20,19 @@ public class DecksOfCards {
             }
 
         }
+        list = Arrays.asList(deck);
+        Collections.shuffle(list);
 
+    }
+
+    public  void  printCards(){
+        for (int i = 0; i < list.size(); i++){
+            System.out.printf("%-19s%s", list.get(i), ((i+1) % 4 == 0) ? System.lineSeparator() : "");
+        }
+    }
+    public  static void  main(String[] args){
+        DecksOfCards cards = new DecksOfCards();
+        cards.printCards();
     }
 
 }
